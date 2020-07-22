@@ -13,7 +13,7 @@ void press0(void)
 	}
 	else
 	{
-		printf("%d", *num);
+		printf("%d\n", *num);
 		free(num);
 		press0();
 	}
