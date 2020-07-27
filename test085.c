@@ -1,10 +1,10 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 
 int main()
 {
-	int h, b, c, s;
+	long long h, b, c, s;
 	double size;
-	scanf("%d %d %d %d", &h, &b, &c, &s);
+	scanf("%lld %lld %lld %lld", &h, &b, &c, &s);
 	size = (double)(h * b * c * s) / 8 / 1024 / 1024;
 	printf("%.1f MB", size);
 	return 0;
