@@ -1,34 +1,29 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main()
 {
-/*	int count;
-	char n[20];
+	int count;
+	char * n;
 	char * ptr;
-	scanf("%d\n", &count);
 	
+	scanf("%d\n", &count);	//getchar() 대신 \n 
+	
+	n = (char *)malloc(16 * count);
 	
 	scanf("%[^\n]s", n);
+	
 	ptr = strtok(n, " ");
-	printf("%s\n", ptr);
+	printf("%s\n", n);
 	count--;
-	if(count == 0) return 0;
-	reprint:
-	ptr = strtok(NULL, " ");
-	printf("%s\n", ptr);
-	count--;
-	if(count != 0) goto reprint;
-	return 0;
-*/
 	
-	int count, num;
-	scanf("%d\n", &count);
-	
-	reprint:
-	scanf("%d", &num);
-	printf("%d\n", num);
-	--count;
-	if(count != 0) goto reprint;
+	while(count != 0)
+	{
+		ptr = strtok(NULL, " ");
+		printf("%s\n", ptr);
+		count--;
+	}
+	free(n);
 	return 0;
 }
