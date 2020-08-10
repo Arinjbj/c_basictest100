@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 
 #define Bsize 19
 
@@ -23,13 +23,11 @@ int main()
 		y--;
 		for(j = 0;j < Bsize;j++)
 		{
-			if(j == x) continue;
-			board[x][j] = !board[x][j];
+			if(j != y) board[x][j] = !board[x][j];
 		}
 		for(j = 0;j < Bsize;j++)
 		{
-			if(j == y) continue;
-			board[j][y] = !board[j][y];
+			if(j != x) board[j][y] = !board[j][y];
 		}
 	}
 	
